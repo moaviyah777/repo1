@@ -10,17 +10,17 @@ pipeline {
         }
         stage('install') {
             steps {
-                sh "mvn install -f TicketBookingServiceJunitTesting"
+                sh "mvn install"
             }
         }
         stage('test') {
             steps {
-                sh "mvn test -f TicketBookingServiceJunitTesting"
+                sh "mvn test"
             }
         }
         stage('package') {
             steps {
-                sh "mvn package -f TicketBookingServiceJunitTesting"
+                sh "mvn"
             }
         }
     }
